@@ -44,8 +44,9 @@ class Favorite_ctrl {
         movies.push({ dbId: Movie.id, data });
       }
 
-      const output = movies.map(({ dbId, data }) => ({
+      const output = movies.map(({ dbId, status, data }) => ({
         dbId,
+        status,
         id: data.id,
         title: data.title,
         backdrop_path: data.backdrop_path,
