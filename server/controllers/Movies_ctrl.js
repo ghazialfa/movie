@@ -7,7 +7,7 @@ class Movies_ctrl {
   static async getAll(req, res, next) {
     try {
       const { search, page = 1 } = req.query;
-      console.log("🚀 ~ Movies_ctrl ~ getAll ~ search:", search);
+      // console.log("🚀 ~ Movies_ctrl ~ getAll ~ search:", search);
 
       let movies;
       if (search) {
@@ -142,11 +142,11 @@ class Movies_ctrl {
 
       const msg = userRequest;
       const result = await chat.sendMessage(msg);
-      console.log("🚀 ~ Movies_ctrl ~ getAi ~ result:", result);
+      // console.log("🚀 ~ Movies_ctrl ~ getAi ~ result:", result);
       const response = await result.response;
-      console.log("🚀 ~ Movies_ctrl ~ getAi ~ response:", response);
+      // console.log("🚀 ~ Movies_ctrl ~ getAi ~ response:", response);
       const text = await response.text();
-      console.log("🚀 ~ Movies_ctrl ~ getAi ~ text:", text);
+      // console.log("🚀 ~ Movies_ctrl ~ getAi ~ text:", text);
 
       const movies = [];
 

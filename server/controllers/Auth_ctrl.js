@@ -68,7 +68,7 @@ class Auth_ctrl {
   static async loginGoogle(req, res, next) {
     try {
       const { googleToken } = req.body;
-      console.log("🚀 ~ Auth_ctrl ~ loginGoogle ~ req.body:", req.body);
+      // console.log("🚀 ~ Auth_ctrl ~ loginGoogle ~ req.body:", req.body);
 
       const ticket = await client.verifyIdToken({
         idToken: googleToken,
@@ -87,7 +87,7 @@ class Auth_ctrl {
           password,
         });
       }
-      console.log("🚀 ~ Auth_ctrl ~ loginGoogle ~ user:", user);
+      // console.log("🚀 ~ Auth_ctrl ~ loginGoogle ~ user:", user);
 
       const access_token = createToken({ id: user.id });
 
